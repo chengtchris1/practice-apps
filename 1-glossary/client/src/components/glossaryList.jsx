@@ -1,10 +1,31 @@
 import React from 'react';
-GlossaryList = ()=>{
+import GlossaryItem from './glossaryItem.jsx'
+const GlossaryList = ({search, glossary, handleEditButton})=>{
 return(
   <ol>
-    <li>Test1</li>
-    <li>Test2</li>
-    <li>Test3</li>
+    {
+      //As part of map here, can filter for desired search.
+      //If blank, show all.
+      glossary .filter((item)=>{
+          if(search===""){
+            return true;
+          } else {
+            let word = item.word.toUpperCase();
+            let definition = item.definition.toUpperCase();
+            let currentSearch = search.toUpperCase();
+            return word.includes(currentSearch) || definition.includes(currentSearch)
+          }
+      })
+      .map((item)=>{
+        return <GlossaryItem
+        key = {item._id}
+        _id = {item._id}
+        word = {item.word}
+        definition = {item.definition}
+        handleEditButton = {handleEditButton}
+        />
+      })
+    }
   </ol>
 )
 }

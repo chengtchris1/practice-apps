@@ -1,17 +1,17 @@
 db = connect( 'mongodb://localhost:27017/glossary' );
-//db.glossaries.deleteMany({})
+db.glossaries.deleteMany({})
 db.glossaries.insertMany( [
   {
-     word: 'Word1',
-     definition: "Definition1",
+     word: 'Dinosaur',
+     definition: "XYB",
   },
   {
-     word: 'Word2',
-     definition: "Definition2",
+     word: 'Unicorn',
+     definition: "AL2",
   },
   {
-     word: 'Word3',
-     definition: "Definition3",
+     word: 'Mythical',
+     definition: "ZNE",
   }
 
 ] )

@@ -6,12 +6,12 @@ const app = express();
 //Fill me in = Client\dist or src foler,
 
 // Serves up all static and generated assets in in a specified folder.
-/*
-console.log("Test", __dirname)
-console.log(`mongodb://localhost:27017/${process.env.DB_NAME}`)*/
-app.use(express.static(path.join(__dirname, /* FILL ME IN */)));
-app.use(express.json())
 
+console.log("Test" + path.join(__dirname, "../client/dist/index.html"))
+/*
+console.log(`mongodb://localhost:27017/${process.env.DB_NAME}`)*/
+app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.json())
 app.get('/wordbank', (req, res)=>{
   //Need to somehow figure out if the get request from app.post is done.
   db.getAllWords()
