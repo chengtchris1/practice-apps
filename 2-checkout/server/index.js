@@ -54,7 +54,7 @@ app.get('/checkout', (req, res)=>{
 
 app.patch('/checkout/:sessionID/:formID', (req, res)=>{
   let id = req.params.sessionID;
-  console.log(typeof req.params.formID);
+  console.log(req.params.formID);
   if(req.params.formID === '1'){
     db.addLogin(id, req.body.name, req.body.email, req.body.password)
       .then((data)=>{

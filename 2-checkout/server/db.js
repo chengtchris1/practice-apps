@@ -29,13 +29,13 @@ db.connectAsync()
       address1 VARCHAR(256),
       address2 VARCHAR(256),
       city VARCHAR(256),
-      shipZip VARCHAR(5),
-      state VARCHAR(2),
-      phone VARCHAR(20),
-      creditCard VARCHAR(16),
-      expiryDate VARCHAR(5),
-      cvv VARCHAR(3),
-      billZip VARCHAR(5)
+      shipZip VARCHAR(256),
+      state VARCHAR(256),
+      phone VARCHAR(256),
+      creditCard VARCHAR(256),
+      expiryDate VARCHAR(256),
+      cvv VARCHAR(256),
+      billZip VARCHAR(256)
       )`
     )
   )
